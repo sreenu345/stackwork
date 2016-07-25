@@ -1,0 +1,95 @@
+header{
+	position: fixed;
+}
+.main{
+	background-color: brown;
+}
+header h1{
+	font-family:sans-serief;
+	letter-spacing: 1px;
+	font-size: 40px;
+	text-shadow: 2px 1px 1px red;
+	margin-left: 0px;
+}
+nav a{
+	text-decoration:none;
+	font-size: 18px;
+	font-color:block;
+}
+nav li{
+	display:inline;
+}
+nav a:hover{
+text-decoration: underline;
+font-size: 20px;
+color:red;
+}
+nav li:after{
+	content:'|';
+}
+nav li:last-child:after{
+	content: none;
+}
+.three{
+	margin-top: 85px;
+	background-color: #e3e3e3;
+	margin-left: 0px;
+}
+.three p{
+	line-height: 2;
+}
+.three a{
+	text-decoration: none;
+}
+.three a:hover{
+	font-size: 16px;
+	color: red;
+	text-decoration: underline;
+}
+.hero{
+	background-color: #3e3e3e;
+	margin-left: 0px;
+}
+.address{
+
+	text-align: left;
+	background-color: #F0E68C;
+	height: 300px;
+}
+.address h3{
+text-align: center;
+}
+.threerows{
+	height: 300px;
+}
+.first{
+	background-color: #7FFFD4;
+	height: 100px;
+}
+.second{
+	background-color: #8FBC8F;
+	height: 100px;
+}
+.third{
+	background-color: #ADFF2F;
+	height: 100px;
+}
+.bottom{
+	margin:auto;
+	margin-left: 0px;
+	font-size: 20px;
+	background-color: 	#FFC0CB;
+}
+footer li{
+	display: inline;
+}
+footer p{
+	float: left;
+}
+.f{
+	margin-right: 0px
+}
+.photos{
+	margin-top: 85px;
+	background-color: cyan;
+}
