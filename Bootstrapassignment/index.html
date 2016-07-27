@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title></title>
+		<meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		
+	</head>
+	<body>
+	
+		<div class="container" id="main">
+
+			<div class="navbar navbar-fixed-top">
+				<div class="container">
+					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand"><strong>My Webpage</strong></p>
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">About me</a>
+										</li>
+										<li>
+											<a href="#">My Village</a>
+										</li>
+										<li>
+											<a href="#">My Career</a>
+										</li>
+										<li class="divider"></li>
+										<li class="dropdown-header">Education</li>
+										<li>
+											<a href="#">School</a>
+										</li>
+										<li>
+											<a href="#">Inter(Puc)</a>
+										</li>
+										<li>
+											<a href="#">UG</a>
+										</li>
+										<li>
+											<a href="#">PG</a>
+										</li>
+									</ul>
+							</li>
+						</ul>
+						<form class="navbar-form pull-left">
+							<input type="text" class="form-control" placeholder="Search here..." id="searchinput">
+							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+						</form><!--end navbar-form-->
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-wrench"></span>	Settings</a>
+									</li>
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-pencil"></span>	Edit Profile</a>
+									</li>
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-camera"></span>	Photos</a>
+									</li>
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-signal"></span>	Your Score</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-off"></span>	Logout</a>
+									</li>
+								</ul>
+							</li>
+						</ul><!--end nav navbar-nav pull-right-->
+					</div><!--end nav-collapse-->
+				</div><!--end container-->
+			</div><!--end navbar-->
+
+			<div class="carousel slide" id="myCarousel">
+				<!--indicators-->
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#mycarousel"></li>
+					<li data-slide-to="1" data-target="#myCarousel"></li>
+					<li data-slide-to="2" data-target="#myCarousel"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item" id="slide1">
+						<div class="carousel-caption">
+							<h4>Sreenivasa Reddy</h4>
+							<p>Hai i am sreenivas iam taking training in koramangala immersive batch.</p> 
+						</div><!--end carousel-caption-->
+					</div><!--end item-->
+					<div class="item" id="slide2">
+						<div class="carousel-caption">
+							<h4>Digital</h4>
+							<p>Wipro digital is the best platform to learn something.</p> 
+						</div><!--end carousel-caption-->
+					</div><!--end item-->
+					<div class="item active" id="slide3">
+						<div class="carousel-caption">
+							<h4>StackRoute</h4>
+							<p>The stackroute which will deliver the full stack programmers.</p> 
+						</div><!--end carousel-caption-->
+					</div><!--end item-->
+				</div><!--carousel-inner-->
+				<!--controls-->
+				<a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+				<a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+			</div><!--end carousel-->
+
+			<div class="row" id="bigcallout">
+				<div class="col-12">
+
+					<div class="alert alert-success alert-block fade in" id="successAlert">
+						<buton type="button" class="close" data-dismiss="alert">&times;</buton>
+						<h4>Success!</h4>
+						<p>I am completed my html and css assignment</p>
+					</div><!--end alert-->
+					<!--visible only small devices-->
+					<div class="well well-small visible-sm">
+						<a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone"></span>Give us a call</a>
+					</div><!--end well wel-small-->
+
+					<div class="well">
+						<div class="page-header">
+							<h1>About me<small>A brief introduction.</small></h1>
+						</div><!--end page-header-->
+						<p>I am sreenivasa reddy working in wipro technology.I completed my training in CORE JAVA and enter into digital academy.Now i am taking training in stackroute,koramangala.</p>
+						<a href="" class="btn btn-large btn-primary" id="alertme">Click here for more</a>
+						<a href="" class="btn btn-large btn-link">click here for mail-id</a>
+					</div><!-- end well-->
+				</div><!--end col-12-->
+			</div><!-- end bigcallout-->
+
+			<div class="row" id="featuresheading">
+				<div class="col-12">
+					<h2>My Learnings</h2>
+					<p class="lead">Here are some  technologies i am learning in stackroute,koramangala.</p>
+				</div><!--end col-12-->
+			</div><!--end features heading-->
+
+			<div class="row" id="features">
+				<div class="col-sm-4 feature">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Markup With Html</h3>
+						</div><!--end panel-heading-->
+						<img src="images/badges_html.jpg" alt="HTML5" class="img-circle">
+						<p>Hyper text markup language</p>
+						<a href="" target="_blank" class="btn btn-warning btn-block">Lear to code Html</a>
+					</div><!==end panel-->
+				</div><!--end feature-->
+				<div class="col-sm-4 feature">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">CSS Styles</h3>
+						</div><!--end panel-heading-->
+						<img src="images/badges_css.jpg" alt="CSS" class="img-circle">
+						<p>Cascading style sheet. </p>
+						<a href="" target="_blank" class="btn btn-danger btn-block">Apply Styles with CSS</a>
+					</div><!==end panel-->
+				</div><!--end feature-->
+				<div class="col-sm-4 feature">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Bootstrap</h3>
+						</div><!--end panel-heading-->
+						<img src="images/badges_bootstrap.jpg" alt="Bootstrap" class="img-circle">
+						<p>The code response with bootstrap.</p>
+						<a href="" target="_blank" class="btn btn-info btn-block">Practise Bootstrap</a>
+					</div><!--end panel-->
+				</div><!--end feature-->
+
+			</div><!--end features-->
+
+			<div class="row" id="moreinfo">
+				<div class="col-sm-6">
+					<h3>My office Datails</h3>
+					<div class="tabbable">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+							<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab1">
+								<h4><span class="glyphicon glyphicon-map-marker"></span>My Wipro<small>office details</small></h4>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d248863.64731140286!2d77.48216988565692!3d12.940178827151247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1swipro+electronic+city!5e0!3m2!1sen!2sin!4v1469528386312" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+								<p>Wipro Limited (Western India Palm Refined Oils Limited or more recently, Western India Products Limited) is an Indian Information Technology Services corporation headquartered in Bangalore. </p>
+								<p>In 2013, Wipro demerged its non-IT businesses into a separate companies to bring in more focus on independent businesses.As of Dec 2015, Wipro's market capitalization was $45 Billion, making it one of India's largest publicly traded companies and seventh largest IT Corporation in the World. </p>
+							</div><!--end tab-pane-->
+							<div class="tab-pane" id="tab2">
+								<h4>Stackroute</h4>
+								<img src="images/stackroute.jpg" class="thumbnail pull-left">
+								<p>A full stack programmer is to a an ordinary programmer what a rocket launcher is to a toy gun. Proficient in all aspects of product engineering, these are the cool special forces like experts around whom high-performance teams are built. StackRoute full stack programmers have the rocking ability to develop, test and release complete apps - on their own, before breakfast, if they so desire. </p>
+
+								<p>They work with a wide range of technology stacks spanning the user interface (UI), the web services layer, high performance middleware and backend such as storage. They live in an engineering culture steeped in Agile methods, Continuous Integration and DevOps. If our tech stack sounds like Greek and Latin to you, are you sure you’re on the right page? </p>
+								<hr>
+								<a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span>Click for Modal Window!</a>
+
+								<div class="modal fade" id="myModal">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button class="close" data-dismiss="modal">&times;</button>
+												<h4 class="modal-title">RegistrationForm</h4>
+											</div><!--end modal-header-->
+											<div class="modal-body">
+												<form class="form-horizontal">
+													<div class="form-group">
+														<label class="col-lg-2 control-label" for="inputName">Name</label>
+														<div class="col-lg-10">
+															<input class="form-control" id="inputName" placeholder="enter name" type="text">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-lg-2 control-label" for="inputEmail">Email</label>
+														<div class="col-lg-10">
+															<input class="form-control" id="inputEmail" placeholder="enter mail-id" type="email">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-lg-2 control-label" for="inputaddress">Address</label>
+														<div class="col-lg-10">
+															<textarea class="form-control" id="inputaddress" placeholder="enter address" rows="5"></textarea>
+															<button class="btn btn-success pull-right" type="submit">Ok</button>
+														</div>
+													</div>
+												</form>
+											</div><!--end modal-body-->
+											<div class="modal-footer">
+												<button class="btn btn-default" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary" type="button">Save Changes</button>
+											</div><!--end modal-footer-->
+										</div><!--end modal-content-->
+									</div><!--end modal-dialog-->
+								</div><!--end myModal-->
+							</div><!--end tab-pane-->
+						</div><!--end tab-content-->
+					</div><!--end tabbable-->
+				</div><!--end col-sm-6-->
+				<div class="col-sm-6">
+					<h3>More Information</h3>
+					<p>I am sreenivasa reddy working in wipro technologies as a project engineer.I have 5 months experience.I had trained on core java,html and css.I got 79% in my training.Now i am take training in stackroutekoramangala.</p>
+					<h4>Some More info</h4>
+					<div class="list-group">
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">Skills</h4>
+							<p>C,CORE JAVA,SQL,PLSQL,HTML,CSS,BOOTSTRAP</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">Hobbies</h4>
+							<p>Playing Cricket,Chating with friends,Reqading books,surfing net...</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">Projects</h4>
+							<p>I done a project in my mca graduation.The title was Online Village Development Monitoring Agency.</p>
+						</a>
+					</div><!--end list-group-->
+					<h3>My College</h3>
+					<p>Sree Vidyanikethan Engineering College was established in 1996 by Sree Vidyanikethan Educational Trust under the stewardship of Mohan Babu, a film artist and former member of Rajya Sabha.The college is situated in lush green and scenic surroundings, 16 km from the famous temple-town of Tirupati.</p>
+				</div><!--end col-sm-6 -->
+			</div><!--end moreinfo-->
+			<hr>
+			<div class="row" id="moreCourses">
+				<div class="col-12">
+					<h3>My Officials</h3>
+					<div class="thumbnails row">
+						<div class="col-6">
+							<div class="thumbnail">
+								<img src="images/wipro1.jpg" alt="Wipro" width="300">
+								<div class="caption">
+									<h3>My Wipro</h3>
+									<p>Wipro Limited (Western India Palm Refined Oils Limited or more recently, Western India Products Limited) is an Indian Information Technology Services corporation headquartered in Bangalore, India. </p>
+									<p><a href="https://en.wikipedia.org/wiki/Wipro" class="btn btn-primary btn-small" target="_blank">More</a><a href="https://en.wikipedia.org/wiki/Wipro" target="_blank" class="btn btn-small btn-link">Learn More</a></p>
+								</div><!--end caption-->
+							</div><!--end thumbnail-->
+						</div><!--end col-6-->
+						<div class="col-6">
+							<div class="thumbnail">
+								<img src="images/college2.jpg" alt="Sree Vidyanikethan" width="100%">
+								<div class="caption">
+									<h3>My College</h3>
+									<p>Sree Vidyanikethan Engineering College was established in 1996 by Sree Vidyanikethan Educational Trust under the stewardship of Mohan Babu, a film artist and former member of Rajya Sabha.The college is situated in lush green and scenic surroundings, 16 km from the famous temple-town of Tirupati. </p>
+									<p><a href="https://en.wikipedia.org/wiki/Sree_Vidyanikethan_Engineering_College" class="btn btn-primary btn-small" target="_blank">More</a><a href="https://en.wikipedia.org/wiki/Sree_Vidyanikethan_Engineering_College" target="_blank" class="btn btn-small btn-link">Learn More</a></p>
+								</div><!--end caption-->
+							</div><!--end thumbnail-->
+						</div><!--end col-6-->
+					</div><!--end row-->
+				</div><!--end col-12-->
+			</div><!--end more-Courses-->
+
+		</div><!--end container-->
+
+		<footer>
+			<div class="cotainer">
+				<div class="row">
+					<div class="col-sm-2">
+						<h6>Copyright &copy;2016 {Sreenivas}</h6>
+					</div><!--end col-sm-2-->
+
+					<div class="col-sm-4">
+						<h6>About us</h6>
+						<p>This page tells about my college and my office details.</p>
+					</div><!--end col-sm-4-->
+
+					<div class="col-sm-2">
+						<h6>Navigation</h6>
+						<ul class="unstyled">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Links</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div><!--end col-sm-2-->
+
+					<div class="col-sm-2">
+						<h6>Follow Us</h6>
+						<ul class="unstyled">
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Youtube</a></li>
+							<li><a href="#">Google</a></li>
+						</ul>
+					</div><!--end col-sm-2-->
+
+					<div class="col-sm-2">
+						<h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Sreenu</h6>
+					</div><!--end col-sm-2-->
+
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer>
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+	
+	</body>
+</html>
+
