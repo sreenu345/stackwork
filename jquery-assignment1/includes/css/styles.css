@@ -1,0 +1,58 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  sreenivas
+Updated: Aug 2016
+*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*navbar styles*/
+
+.navbar {
+    margin-top: 0px;
+    height: 100px;
+    background: brown;
+}
+
+#s {
+    width: 250px;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+
+/* header*/
+
+.header {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+
+/*container margins*/
+
+.container {
+    margin-top: 100px;
+    /*margin-left: 90px;
+    margin-right: 90px;
+    float: auto;*/
+}
+
+
+/*table data*/
+
+table {
+    border: 2px;
+    background-color: cyan;
+    height: 20px;
+}
