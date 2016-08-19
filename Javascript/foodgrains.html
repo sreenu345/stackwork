@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <h1 align="center">For the year 2013, all the Foodgrains type vs. production</h1>
+    <script>
+    var margin = {
+            top: 20,
+            right: 20,
+            bottom: 250,
+            left: 60
+        },
+        width = 8000 - margin.left - margin.right,
+        height = 600 - margin.top - margin.bottom;
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    //define x,y scale
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .5);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    //define X-Axis
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+    //define Y-Axis
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    d3.json("json/Foodgraincrop.json", function(error, data) {
+        if (error) throw error;
+        data.forEach(function(d) {
+            d.productionvalue = +d.productionvalue;
+            d.croptype = d.croptype;
+        });
+
+        //Define the domains of X and Y axis
+        x.domain(data.map(function(d) {
+            return d.croptype;
+        }));
+        y.domain([0, d3.max(data, function(d) {
+            return d.productionvalue;
+        })]);
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("transform", "rotate(-90)")
+            .attr("dx", "-1em")
+            .attr("dy", ".25em")
+            .style("text-anchor", "end")
+            .style("font-size", "16px");
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .style("font-size", "16px")
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("dx", "1em")
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("productionvalue");
+
+        //draw the bars
+        svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) {
+                return x(d.croptype);
+            })
+            .attr("width", x.rangeBand())
+            .attr("y", function(d) {
+                return y(d.productionvalue);
+            })
+            .attr("height", function(d) {
+                return height - y(d.productionvalue);
+            })
+            .text("croptype");
+
+        //draw the value on the top of the bar
+        svg.selectAll('text')
+            .data(data)
+            .enter()
+            .append('text')
+            .text(function(d) {
+                return d.productionvalue;
+            })
+            .attr("x", function(d) {
+                return x(d.croptype) + x.rangeBand / 2;
+            })
+            .attr("y", function(d) {
+                return y(d.productionvalue) + 12;
+            })
+            .style("fill", "white")
+            .style("text-anchor", "middle");
+    });
+    </script>
+</body>
+
+</html>
