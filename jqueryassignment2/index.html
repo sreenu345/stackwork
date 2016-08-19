@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>Students Details</title>
+    <meta name="description" content="">
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="includes/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header part-->
+    <div class="navbar navbar-fixed-top">
+        <div class="container" id="header">
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-5">
+                    <p class="navbar-brand" id="title"><strong><h2>Student Database</h2></strong></p>
+                </div>
+                <div class="col-sm-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Start the main Content part-->
+    <div class="container" id="main">
+        <!--Add the student details-->
+        <div class="row" id="features">
+            <div class="col-sm-3 feature">
+                <div class="panel">
+                    <h4>Add the student details</h4>
+                    <a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal">Add</a>
+                </div>
+                <!--Modal window for Add the details-->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add Student Details</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="sname">Student Name</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="sname" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="fname">Father Name</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="fname" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="dob">Date of Birth</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="dob" type="date" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="age">Age</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="age" type="number" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="gender">Gender</label>
+                                        <div class="col-lg-9">
+                                            <select name="gender" id="gender">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="email">Email</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="email" type="email" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="phone">Phone no</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="phone" type="number" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="hobbies">Hobbies</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" id="hobbies" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="address">Address</label>
+                                        <div class="col-lg-9">
+                                            <textarea class="form-control" id="address" rows="5"></textarea>
+                                            <br>
+                                            <br>
+                                            <button class="btn btn-success" data-dismiss="modal" type="submit" id="addbtn">Add</button>
+                                            <button class="btn btn-success pull-right" type="reset" id="reset">reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--search box and buttons design part-->
+            <div class="col-sm-6 feature">
+                <div class="panel">
+                    <h4>Search for the student details</h4>
+                    <form class="navbar-form" action="#">
+                        <input type="text" class="form-control" placeholder="Search here..." id="searchinput">
+                        <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+                    </form>
+                </div>
+            </div>
+            <!--Load all students data-->
+            <div class="col-sm-3 feature">
+                <div class="panel">
+                    <h4>Load all the student details</h4>
+                    <button type="submit" class="btn btn-warning" id="load">Load</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Show all the data-->
+    <div class="row container">
+        <table id="loadall" class="table-responsive" width="100%" border="2px">
+            <template id="addtempl">
+                <tr class="edit" data-id={{id}}>
+                    <td><span class="noedit id">{{id}}</span>
+                        <input class="edit id" />
+                    </td>
+                    <td><span class="noedit sname">{{sname}}</span>
+                        <input class="edit sname" />
+                    </td>
+                    <td><span class="noedit fname">{{fathersname}}</span>
+                        <input class="edit fname" />
+                    </td>
+                    <td><span class="noedit dob">{{dob}}</span>
+                        <input class="edit dob" />
+                    </td>
+                    <td><span class="noedit age">{{age}}</span>
+                        <input class="edit age" />
+                    </td>
+                    <td><span class="noedit gender">{{gender}}</span>
+                        <input class="edit gender" />
+                    </td>
+                    <td><span class="noedit email">{{email}}</span>
+                        <input class="edit email" />
+                    </td>
+                    <td><span class="noedit phone">{{phone}}</span>
+                        <input class="edit phone" />
+                    </td>
+                    <td><span class="noedit hobbies">{{hobbies}}</span>
+                        <input class="edit hobbies" />
+                    </td>
+                    <td><span class="noedit address">{{address}}</span>
+                        <input class="edit address" />
+                    </td>
+                    <td width="150">
+                        <button data-id={{id}} class='remove'> Delete </button>
+                        <button data-id={{id}} class="editStudent  noedit"> Update </button>
+                        <button data-id={{id}} class="saveEdit edit">Save</button>
+                        <button class="cancelEdit edit">Cancel</button>
+                    </td>
+                </tr>
+            </template>
+        </table>
+    </div>
+    <div class="container">
+        <button class="btn-primary btn pull-left" id="previous">Prev</button>
+        <button class="btn-primary btn pull-right" id="next">Next</button>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class="cotainer">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h6>Copyright &copy;2016 {Sreenivas}</h6>
+                </div>
+                <!--end col-sm-2-->
+                <div class="col-sm-4">
+                </div>
+                <!--end col-sm-4-->
+                <div class="col-sm-2">
+                </div>
+                <!--end col-sm-2-->
+                <div class="col-sm-2">
+                </div>
+                <!--end col-sm-2-->
+                <div class="col-sm-2">
+                    <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Sreenu</h6>
+                </div>
+                <!--end col-sm-2-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </footer>
+    <!-- All Javascript at the bottom of the page for faster page loading -->
+    <!-- First try for the online version of jQuery-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- If no online access, fallback to our hardcoded version of jQuery -->
+    <script>
+    window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="includes/js/script.js"></script>
+    <script type="text/javascript" src="jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+</body>
+
+</html>

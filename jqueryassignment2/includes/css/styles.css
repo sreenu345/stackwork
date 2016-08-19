@@ -1,0 +1,67 @@
+body{
+   -webkit-font-smoothing:antialiased;
+   text-rendering: optimizeLegibility;
+}
+table{
+   background-color: #FDEBD0;
+}
+table td .edit{
+   display: none;
+}
+table td.edit .edit{
+   display: initial;
+}
+table td.edit .noedit{
+   display: none;
+}
+#header{
+   height:100px;
+}
+
+#main{
+   margin-top: 105px;
+}
+
+#features{
+   text-align: center;
+   align-items: center;
+}
+
+.panel{
+   height: 110px;
+   background: cyan;
+}
+
+#searchinput{
+   width: 300px;
+} 
+
+#inputaddress{
+   margin-bottom:15px;
+}
+
+#loadall{
+   margin-left: 105px;
+}
+
+footer{
+   background: #333;
+   color: #eee;
+   font-size: 11px;
+   padding: 20px;
+   margin-top: 355px;
+   margin-bottom: 0px;
+}
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+@media(max-width: 990px)
+{
+   #searchinput{
+      width: 150px;
+   } 
+   .panel{
+      height: 150px;
+   }
+}
